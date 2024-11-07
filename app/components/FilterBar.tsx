@@ -47,26 +47,26 @@ export function FilterBar({ onSearch, initialValues = {} }: FilterBarProps) {
         ].map((input, index) => (
           <div key={index} className="col-span-1 flex flex-col">
             <Label className="text-[0.875rem] text-[#666]">{input.label}</Label>
-            <Input value={input.value} readonly className="mt-1" />
+            <Input value={input.value} readonly className="mt-1 w-full" />
           </div>
         ))}
       </div>
 
       {/* Filter Controls */}
       <div className="grid grid-cols-4 gap-4 mt-6">
-        <div>
+        <div className="flex flex-col">
           <Label className="text-[0.875rem] text-[#666]">
             Contract Number:
           </Label>
           <Input
             placeholder="Placeholder Text"
-            className="mt-1"
+            className="mt-1 w-full"
             value={filters.contractNumber}
             onChange={(e) => handleChange("contractNumber", e.target.value)}
           />
         </div>
 
-        <div>
+        <div className="flex flex-col">
           <Label className="text-[0.875rem] text-[#666]">Created On:</Label>
           <DatePicker
             value={filters.createdOn}
@@ -76,10 +76,10 @@ export function FilterBar({ onSearch, initialValues = {} }: FilterBarProps) {
           />
         </div>
 
-        <div>
+        <div className="flex flex-col">
           <Label className="text-[0.875rem] text-[#666]">Created By:</Label>
           <Select
-            className="mt-1"
+            className="mt-1 w-full"
             onChange={(e) =>
               handleChange(
                 "createdBy",
@@ -93,13 +93,13 @@ export function FilterBar({ onSearch, initialValues = {} }: FilterBarProps) {
           </Select>
         </div>
 
-        <div>
+        <div className="flex flex-col">
           <Label className="text-[0.875rem] text-[#666]">
             Customer Reference:
           </Label>
           <Input
             placeholder="Placeholder Text"
-            className="mt-1"
+            className="mt-1 w-full"
             value={filters.customerReference}
             onChange={(e) => handleChange("customerReference", e.target.value)}
           />

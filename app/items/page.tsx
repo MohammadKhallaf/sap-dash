@@ -52,7 +52,6 @@ export default function Dashboard() {
         <FilterBar onSearch={handleSearch} initialValues={{}} />{" "}
         <FlexBox direction="Column">
           <Card>
-            <Title>Construction Project Overview</Title>
             <div className="overflow-x-auto">
               <AnalyticalTable
                 isTreeTable
@@ -60,7 +59,6 @@ export default function Dashboard() {
                 data={tableState.data}
                 filterable
                 groupable
-                header="Project Details"
                 infiniteScroll
                 infiniteScrollThreshold={20}
                 loadingDelay={1000}
