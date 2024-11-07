@@ -1,5 +1,32 @@
-.popover {
+.shellBar {
+  --_ui5-shellbar-root-height: 3rem;
 }
-.popover::part(content) {
-  padding: 0;
+
+.logo {
+  height: 1.875rem;
+  width: auto;
+}
+
+.searchContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24rem;
+  max-width: calc(100% - 32rem);
+}
+
+.backButton {
+  margin-right: 0.5rem;
+}
+
+.popover {
+  min-width: 15rem;
+}
+
+.menuItem {
+  min-width: 10rem;
+}
+
+.menuItemSelected {
+  background-color: var(--sapList_SelectionBackgroundColor);
 }
