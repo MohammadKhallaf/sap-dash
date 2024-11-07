@@ -1,5 +1,5 @@
 import { BusyIndicator } from "@ui5/webcomponents-react";
-import BusyIndicatorSize from "@ui5/webcomponents/dist/types/BusyIndicatorSize.js";
+import BusyIndicatorSize from "@ui5/webcomponents/dist/types/BusyIndicatorSize";
 
 export default function HomeLoading() {
   return (

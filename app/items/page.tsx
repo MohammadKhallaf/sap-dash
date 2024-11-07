@@ -6,12 +6,10 @@ import {
   Card,
   FlexBox,
   TextAlign,
-  Title,
 } from "@ui5/webcomponents-react";
 import { useEffect, useState } from "react";
 import { FilterBar, type FilterValues } from "../components/FilterBar";
 
-// Data Structure Types
 export interface ForecastData {
   date: string;
   value: string;
@@ -22,7 +20,6 @@ export default function Dashboard() {
 
   const handleSearch = (filters: FilterValues) => {
     console.log("Searching with filters:", filters);
-    // Implement search logic
   };
 
   useEffect(() => {
