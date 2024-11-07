@@ -1,5 +1,9 @@
-/* to prevent flickering, only show the web-component when its custom-element is defined  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :not(:defined) {
+  /* to prevent flickering, only show the web-component when its custom-element is defined  */
   display: none;
 }
 

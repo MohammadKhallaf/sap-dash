@@ -51,7 +51,7 @@ export default function Overview() {
         Overview
       </Title>
 
-      <FlexBox wrap="Wrap">
+      <FlexBox wrap="Wrap" className="gap-4">
         {cards.map((card, index) => (
           <OverviewCard
             key={index}
