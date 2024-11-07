@@ -1,14 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { generateTableData, type TableState } from "@/scripts/generateData";
 import {
   AnalyticalTable,
   Card,
   FlexBox,
-  Title,
   TextAlign,
+  Title,
 } from "@ui5/webcomponents-react";
-import { generateTableData, type TableState } from "@/scripts/generateData";
+import { useEffect, useState } from "react";
+import { FilterBar, type FilterValues } from "../components/FilterBar";
 
 // Data Structure Types
 export interface ForecastData {
@@ -18,6 +19,11 @@ export interface ForecastData {
 
 export default function Dashboard() {
   const [tableState, setTableState] = useState<TableState | null>(null);
+
+  const handleSearch = (filters: FilterValues) => {
+    console.log("Searching with filters:", filters);
+    // Implement search logic
+  };
 
   useEffect(() => {
     const data = generateTableData(15);
@@ -43,6 +49,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen">
       <main className="p-4">
+        <FilterBar onSearch={handleSearch} initialValues={{}} />{" "}
         <FlexBox direction="Column">
           <Card>
             <Title>Construction Project Overview</Title>
